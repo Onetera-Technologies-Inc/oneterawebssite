@@ -2,5 +2,6 @@
   "repositoryName": "onetera-site",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
-  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+  "localSliceSimulatorURL": "https://onetera.cdn.prismic.io/api/v2?access_token=Tzz10iIRDWHlS0SEUe3V3Ysi",
+  "apiEndpoint": "https://onetera.cdn.prismic.io/api/v2"
 }
