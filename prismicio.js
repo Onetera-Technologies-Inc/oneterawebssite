@@ -1,11 +1,16 @@
-import { createClient } from '../prismicio'; // Adjust path based on your structure
+import * as prismic from '@prismicio/client';
 
-export async function getStaticProps() {
-  const client = createClient();
-  const homepage = await client.getByType('homepage');
-  
-  return {
-    props: { homepage },
-  };
-}
+export const repositoryName = 'onetera-site';
 
+export const createClient = (config = {}) => {
+  const client = prismic.createClient(repositoryName, {
+    accessToken: 'Tzz10iIRDWHlS0SEUe3V3Ysi', // Your access token
+    routes: [
+      { type: 'homepage', path: '/' },
+      { type: 'page', path: '/:uid' },
+    ],
+    ...config, // Allows you to pass additional options if necessary
+  });
+
+  return client;
+};
