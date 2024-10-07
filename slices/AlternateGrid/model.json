@@ -70,8 +70,19 @@
               }
             }
           }
+        },
+        "featurebutton": {
+          "type": "Link",
+          "config": {
+            "label": "Featurebutton",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
         }
-      }
+      },
+      "items": {}
     },
     {
       "id": "imageRight",
@@ -140,7 +151,8 @@
             }
           }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

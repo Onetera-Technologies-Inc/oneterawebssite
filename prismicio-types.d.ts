@@ -29,7 +29,10 @@ export interface HomeDocumentDataNavigationItem {
   label: prismic.KeyTextField;
 }
 
-type HomeDocumentDataSlicesSlice = AlternateGridSlice;
+type HomeDocumentDataSlicesSlice =
+  | HomebannerSlice
+  | FeaturedSlice
+  | AlternateGridSlice;
 
 /**
  * Content for home documents
@@ -230,6 +233,16 @@ export interface AlternateGridSliceDefaultPrimary {
   items: prismic.GroupField<
     Simplify<AlternateGridSliceDefaultPrimaryItemsItem>
   >;
+
+  /**
+   * Featurebutton field in *AlternateGrid → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: alternate_grid.default.primary.featurebutton
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  featurebutton: prismic.LinkField;
 }
 
 /**
@@ -335,6 +348,141 @@ export type AlternateGridSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Featured → Default → Primary*
+ */
+export interface FeaturedSliceDefaultPrimary {
+  /**
+   * Featurelist field in *Featured → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featured.default.primary.featurelist
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  featurelist: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Featured Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturedSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturedSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Featured*
+ */
+type FeaturedSliceVariation = FeaturedSliceDefault;
+
+/**
+ * Featured Shared Slice
+ *
+ * - **API ID**: `featured`
+ * - **Description**: Featured
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturedSlice = prismic.SharedSlice<
+  "featured",
+  FeaturedSliceVariation
+>;
+
+/**
+ * Primary content in *Features → Default → Primary*
+ */
+export interface FeaturesSliceDefaultPrimary {
+  /**
+   * Featurelist field in *Features → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.default.primary.featurelist
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  featurelist: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Features Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Features*
+ */
+type FeaturesSliceVariation = FeaturesSliceDefault;
+
+/**
+ * Features Shared Slice
+ *
+ * - **API ID**: `features`
+ * - **Description**: Features
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturesSlice = prismic.SharedSlice<
+  "features",
+  FeaturesSliceVariation
+>;
+
+/**
+ * Primary content in *Homebanner → Default → Primary*
+ */
+export interface HomebannerSliceDefaultPrimary {
+  /**
+   * Maincontent field in *Homebanner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: mainbanner
+   * - **API ID Path**: homebanner.default.primary.maincontent
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  maincontent: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Homebanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HomebannerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HomebannerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Homebanner*
+ */
+type HomebannerSliceVariation = HomebannerSliceDefault;
+
+/**
+ * Homebanner Shared Slice
+ *
+ * - **API ID**: `homebanner`
+ * - **Description**: Homebanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HomebannerSlice = prismic.SharedSlice<
+  "homebanner",
+  HomebannerSliceVariation
+>;
+
+/**
  * Default variation for Slider Slice
  *
  * - **API ID**: `default`
@@ -395,6 +543,18 @@ declare module "@prismicio/client" {
       AlternateGridSliceVariation,
       AlternateGridSliceDefault,
       AlternateGridSliceImageRight,
+      FeaturedSlice,
+      FeaturedSliceDefaultPrimary,
+      FeaturedSliceVariation,
+      FeaturedSliceDefault,
+      FeaturesSlice,
+      FeaturesSliceDefaultPrimary,
+      FeaturesSliceVariation,
+      FeaturesSliceDefault,
+      HomebannerSlice,
+      HomebannerSliceDefaultPrimary,
+      HomebannerSliceVariation,
+      HomebannerSliceDefault,
       SliderSlice,
       SliderSliceVariation,
       SliderSliceDefault,

@@ -1,0 +1,26 @@
+{
+  "id": "homebanner",
+  "type": "SharedSlice",
+  "name": "Homebanner",
+  "description": "Homebanner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "maincontent": {
+          "type": "Text",
+          "config": {
+            "label": "Maincontent",
+            "placeholder": "mainbanner"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -178,6 +178,14 @@
 						]
 					}
 				]
+			},
+			"featurebutton": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "stairs"
+				}
 			}
 		},
 		"items": []

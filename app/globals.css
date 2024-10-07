@@ -2,6 +2,240 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Th.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Th.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-XLt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-XLt.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-ThIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-ThIt.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-RgIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-RgIt.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-UltBlk.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-UltBlk.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-MdIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-MdIt.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Md.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Md.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-UltLt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-UltLt.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-UltBlkIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-UltBlkIt.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-UltLtIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-UltLtIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-SmBdIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-SmBdIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-SmBd.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-SmBd.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Rg.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-XLtIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-XLtIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-LtIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-LtIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-BdIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-BdIt.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Blk.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Blk.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Bd.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Bd.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-BlkIt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-BlkIt.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram TRIAL';
+  src: url('fonts/DecagramTRIAL-Lt.woff2') format('woff2'),
+      url('fonts/DecagramTRIAL-Lt.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Decagram VF TRIAL';
+  src: url('fonts/DecagramVFTRIAL-Thin.woff2') format('woff2'),
+      url('fonts/DecagramVFTRIAL-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT America';
+  src: url('fonts/GTAmerica-Bold.woff2') format('woff2'),
+      url('fonts/GTAmerica-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('fonts/GTAmerica-Regular.woff2') format('woff2'),
+      url('fonts/GTAmerica-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('fonts/GTAmerica-Regular.woff2') format('woff2'),
+      url('fonts/GTAmerica-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT America';
+  src: url('fonts/GTAmerica-Bold.woff2') format('woff2'),
+      url('fonts/GTAmerica-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,11 +251,48 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Decagram TRIAL' !important; 
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1{
+  font-size: 40px;
+}
+section.es-bounded {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4vw 1.25rem !important;
+}
+p, li{
+  font-family: 'GT America' !important;
+  line-height: 1.2;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+
+/* Slider */
+
+.main-banner-bg{
+  background-image: url(./images/hero-banner.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 50vh;
+
+}
+.main-banner-bg .es-bounded {
+  display: flex;
+  align-items: center;
+  height: 50vh;
+}
+.main-banner-bg .es-bounded h1{
+  font-size: 60px;
 }
