@@ -3,6 +3,6 @@
 import dynamic from "next/dynamic";
 
 export const components = {
-  alternate_grid: dynamic(() => import("./AlternateGrid")),
-  slider: dynamic(() => import("./Slider")),
+  alternate_grid: dynamic(() => import("./AlternateGrid"), { ssr: false }),
+  slider: dynamic(() => import("./Slider"), { ssr: false }),
 };
