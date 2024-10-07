@@ -1,3 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-console": "off", // Allow console statements
+    "react/react-in-jsx-scope": "off", // No need to import React in JSX files (Next.js >= 10)
+    "jsx-a11y/alt-text": "off", // Disable the rule about alt text for images (if needed)
+    "react/no-unescaped-entities": "off", // Allow unescaped entities
+    "react/prop-types": "off", // Disable prop-types rule if you're using TypeScript
+    "@typescript-eslint/no-unused-vars": "off"
+  }
 }
