@@ -20,4 +20,4 @@ const Features = ({ slice }: FeaturesProps): JSX.Element => {
   );
 };
 
-export default Features;
+export default Features; 
