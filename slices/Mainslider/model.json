@@ -1,0 +1,27 @@
+{
+  "id": "mainslider",
+  "type": "SharedSlice",
+  "name": "Mainslider",
+  "description": "Mainslider",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bannerimg": {
+          "type": "Image",
+          "config": {
+            "label": "bannerimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

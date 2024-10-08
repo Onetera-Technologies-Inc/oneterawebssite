@@ -1,0 +1,43 @@
+{
+  "id": "fcard",
+  "type": "SharedSlice",
+  "name": "Fcard",
+  "description": "Fcard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "fmaincard": {
+          "type": "Group",
+          "config": {
+            "label": "fmaincard",
+            "repeat": true,
+            "fields": {
+              "fimg": {
+                "type": "Image",
+                "config": {
+                  "label": "fimg",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "fcontent": {
+                "type": "Text",
+                "config": {
+                  "label": "fcontent",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

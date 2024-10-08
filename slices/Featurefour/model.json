@@ -1,0 +1,43 @@
+{
+  "id": "featurefour",
+  "type": "SharedSlice",
+  "name": "Featurefour",
+  "description": "Featurefour",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "featurefourcard": {
+          "type": "Group",
+          "config": {
+            "label": "Featurefourcard",
+            "repeat": true,
+            "fields": {
+              "featurefourimg": {
+                "type": "Image",
+                "config": {
+                  "label": "featurefourimg",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "featurefourdes": {
+                "type": "Text",
+                "config": {
+                  "label": "featurefourdes",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

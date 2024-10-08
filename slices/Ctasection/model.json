@@ -1,0 +1,45 @@
+{
+  "id": "ctasection",
+  "type": "SharedSlice",
+  "name": "Ctasection",
+  "description": "Ctasection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "smallheading": {
+          "type": "Text",
+          "config": {
+            "label": "smallheading",
+            "placeholder": ""
+          }
+        },
+        "ctaheading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "ctaheading",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "request_demo": {
+          "type": "Link",
+          "config": {
+            "label": "Request Demo btn",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

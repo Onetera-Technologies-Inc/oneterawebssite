@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"ctasmall": {
+				"__TYPE__": "FieldContent",
+				"value": "command",
+				"type": "Text"
+			},
+			"ctalarge": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum sunt magna aliquip laboris. Ea voluptate Lorem consequat pariatur veniam."
+						}
+					}
+				]
+			},
+			"ctabtn": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "age"
+				}
+			}
+		},
+		"items": []
+	}
+]

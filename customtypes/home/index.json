@@ -52,13 +52,19 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "featuredpoints": {
+            "mainslider": {
+              "type": "SharedSlice"
+            },
+            "ctademo": {
+              "type": "SharedSlice"
+            },
+            "partner": {
+              "type": "SharedSlice"
+            },
+            "featurefour": {
               "type": "SharedSlice"
             },
             "homebanner": {
-              "type": "SharedSlice"
-            },
-            "featured": {
               "type": "SharedSlice"
             },
             "alternate_grid": {

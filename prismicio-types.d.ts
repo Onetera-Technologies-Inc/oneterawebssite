@@ -30,9 +30,11 @@ export interface HomeDocumentDataNavigationItem {
 }
 
 type HomeDocumentDataSlicesSlice =
-  | FeaturedpointsSlice
+  | MainsliderSlice
+  | CtademoSlice
+  | PartnerSlice
+  | FeaturefourSlice
   | HomebannerSlice
-  | FeaturedSlice
   | AlternateGridSlice;
 
 /**
@@ -349,308 +351,274 @@ export type AlternateGridSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *Featured → Default → Primary*
+ * Primary content in *Ctademo → Default → Primary*
  */
-export interface FeaturedSliceDefaultPrimary {
+export interface CtademoSliceDefaultPrimary {
   /**
-   * Featurelist field in *Featured → Default → Primary*
+   * ctasmall field in *Ctademo → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ctademo.default.primary.ctasmall
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ctasmall: prismic.KeyTextField;
+
+  /**
+   * ctalarge field in *Ctademo → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: featured.default.primary.featurelist
+   * - **API ID Path**: ctademo.default.primary.ctalarge
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  featurelist: prismic.RichTextField;
+  ctalarge: prismic.RichTextField;
+
+  /**
+   * ctabtn field in *Ctademo → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ctademo.default.primary.ctabtn
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  ctabtn: prismic.LinkField;
 }
 
 /**
- * Default variation for Featured Slice
+ * Default variation for Ctademo Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type FeaturedSliceDefault = prismic.SharedSliceVariation<
+export type CtademoSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<FeaturedSliceDefaultPrimary>,
+  Simplify<CtademoSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Featured*
+ * Slice variation for *Ctademo*
  */
-type FeaturedSliceVariation = FeaturedSliceDefault;
+type CtademoSliceVariation = CtademoSliceDefault;
 
 /**
- * Featured Shared Slice
+ * Ctademo Shared Slice
  *
- * - **API ID**: `featured`
- * - **Description**: Featured
+ * - **API ID**: `ctademo`
+ * - **Description**: Ctademo
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type FeaturedSlice = prismic.SharedSlice<
-  "featured",
-  FeaturedSliceVariation
+export type CtademoSlice = prismic.SharedSlice<
+  "ctademo",
+  CtademoSliceVariation
 >;
 
 /**
- * Item in *Featuredpoints → Default → Primary → featuredcard*
+ * Primary content in *Ctasection → Default → Primary*
  */
-export interface FeaturedpointsSliceDefaultPrimaryFeaturedcardItem {}
-
-/**
- * Item in *Featuredpoints → featuredone → Primary → featuredcard*
- */
-export interface FeaturedpointsSliceFeaturedonePrimaryFeaturedcardItem {}
-
-/**
- * Item in *Featuredpoints → featuredtwo → Primary → featuredcard*
- */
-export interface FeaturedpointsSliceFeaturedtwoPrimaryFeaturedcardItem {}
-
-/**
- * Primary content in *Featuredpoints → Default → Primary*
- */
-export interface FeaturedpointsSliceDefaultPrimary {
+export interface CtasectionSliceDefaultPrimary {
   /**
-   * featuredcard field in *Featuredpoints → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.default.primary.featuredcard[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  featuredcard: prismic.GroupField<
-    Simplify<FeaturedpointsSliceDefaultPrimaryFeaturedcardItem>
-  >;
-
-  /**
-   * featuredimg field in *Featuredpoints → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.default.primary.featuredimg
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  featuredimg: prismic.ImageField<never>;
-
-  /**
-   * featuredheading field in *Featuredpoints → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.default.primary.featuredheadingmain
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  featuredheadingmain: prismic.RichTextField;
-
-  /**
-   * featureddes field in *Featuredpoints → Default → Primary*
+   * smallheading field in *Ctasection → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.default.primary.featuredheading
+   * - **API ID Path**: ctasection.default.primary.smallheading
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  featuredheading: prismic.KeyTextField;
+  smallheading: prismic.KeyTextField;
+
+  /**
+   * ctaheading field in *Ctasection → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ctasection.default.primary.ctaheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  ctaheading: prismic.RichTextField;
+
+  /**
+   * Request Demo btn field in *Ctasection → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ctasection.default.primary.request_demo
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  request_demo: prismic.LinkField;
 }
 
 /**
- * Default variation for Featuredpoints Slice
+ * Default variation for Ctasection Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type FeaturedpointsSliceDefault = prismic.SharedSliceVariation<
+export type CtasectionSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<FeaturedpointsSliceDefaultPrimary>,
+  Simplify<CtasectionSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Primary content in *Featuredpoints → featuredone → Primary*
+ * Slice variation for *Ctasection*
  */
-export interface FeaturedpointsSliceFeaturedonePrimary {
-  /**
-   * featuredcard field in *Featuredpoints → featuredone → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredone.primary.featuredcard[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  featuredcard: prismic.GroupField<
-    Simplify<FeaturedpointsSliceFeaturedonePrimaryFeaturedcardItem>
-  >;
+type CtasectionSliceVariation = CtasectionSliceDefault;
 
+/**
+ * Ctasection Shared Slice
+ *
+ * - **API ID**: `ctasection`
+ * - **Description**: Ctasection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtasectionSlice = prismic.SharedSlice<
+  "ctasection",
+  CtasectionSliceVariation
+>;
+
+/**
+ * Item in *Fcard → Default → Primary → fmaincard*
+ */
+export interface FcardSliceDefaultPrimaryFmaincardItem {
   /**
-   * featuredimg field in *Featuredpoints → featuredone → Primary*
+   * fimg field in *Fcard → Default → Primary → fmaincard*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredone.primary.featuredimg
+   * - **API ID Path**: fcard.default.primary.fmaincard[].fimg
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  featuredimg: prismic.ImageField<never>;
+  fimg: prismic.ImageField<never>;
 
   /**
-   * featuredheading field in *Featuredpoints → featuredone → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredone.primary.featuredheadingmain
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  featuredheadingmain: prismic.RichTextField;
-
-  /**
-   * featureddes field in *Featuredpoints → featuredone → Primary*
+   * fcontent field in *Fcard → Default → Primary → fmaincard*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredone.primary.featuredheading
+   * - **API ID Path**: fcard.default.primary.fmaincard[].fcontent
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  featuredheading: prismic.KeyTextField;
+  fcontent: prismic.KeyTextField;
 }
 
 /**
- * featuredone variation for Featuredpoints Slice
- *
- * - **API ID**: `featuredone`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
+ * Primary content in *Fcard → Default → Primary*
  */
-export type FeaturedpointsSliceFeaturedone = prismic.SharedSliceVariation<
-  "featuredone",
-  Simplify<FeaturedpointsSliceFeaturedonePrimary>,
-  never
->;
-
-/**
- * Primary content in *Featuredpoints → featuredtwo → Primary*
- */
-export interface FeaturedpointsSliceFeaturedtwoPrimary {
+export interface FcardSliceDefaultPrimary {
   /**
-   * featuredcard field in *Featuredpoints → featuredtwo → Primary*
+   * fmaincard field in *Fcard → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredtwo.primary.featuredcard[]
+   * - **API ID Path**: fcard.default.primary.fmaincard[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  featuredcard: prismic.GroupField<
-    Simplify<FeaturedpointsSliceFeaturedtwoPrimaryFeaturedcardItem>
+  fmaincard: prismic.GroupField<
+    Simplify<FcardSliceDefaultPrimaryFmaincardItem>
   >;
-
-  /**
-   * featuredimg field in *Featuredpoints → featuredtwo → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredtwo.primary.featuredimg
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  featuredimg: prismic.ImageField<never>;
-
-  /**
-   * featuredheading field in *Featuredpoints → featuredtwo → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredtwo.primary.featuredheadingmain
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  featuredheadingmain: prismic.RichTextField;
-
-  /**
-   * featureddes field in *Featuredpoints → featuredtwo → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: featuredpoints.featuredtwo.primary.featuredheading
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  featuredheading: prismic.KeyTextField;
 }
 
 /**
- * featuredtwo variation for Featuredpoints Slice
- *
- * - **API ID**: `featuredtwo`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FeaturedpointsSliceFeaturedtwo = prismic.SharedSliceVariation<
-  "featuredtwo",
-  Simplify<FeaturedpointsSliceFeaturedtwoPrimary>,
-  never
->;
-
-/**
- * Slice variation for *Featuredpoints*
- */
-type FeaturedpointsSliceVariation =
-  | FeaturedpointsSliceDefault
-  | FeaturedpointsSliceFeaturedone
-  | FeaturedpointsSliceFeaturedtwo;
-
-/**
- * Featuredpoints Shared Slice
- *
- * - **API ID**: `featuredpoints`
- * - **Description**: Featuredpoints
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FeaturedpointsSlice = prismic.SharedSlice<
-  "featuredpoints",
-  FeaturedpointsSliceVariation
->;
-
-/**
- * Primary content in *Features → Default → Primary*
- */
-export interface FeaturesSliceDefaultPrimary {
-  /**
-   * Featurelist field in *Features → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: features.default.primary.featurelist
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  featurelist: prismic.RichTextField;
-}
-
-/**
- * Default variation for Features Slice
+ * Default variation for Fcard Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type FeaturesSliceDefault = prismic.SharedSliceVariation<
+export type FcardSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Simplify<FeaturesSliceDefaultPrimary>,
+  Simplify<FcardSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Features*
+ * Slice variation for *Fcard*
  */
-type FeaturesSliceVariation = FeaturesSliceDefault;
+type FcardSliceVariation = FcardSliceDefault;
 
 /**
- * Features Shared Slice
+ * Fcard Shared Slice
  *
- * - **API ID**: `features`
- * - **Description**: Features
+ * - **API ID**: `fcard`
+ * - **Description**: Fcard
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type FeaturesSlice = prismic.SharedSlice<
-  "features",
-  FeaturesSliceVariation
+export type FcardSlice = prismic.SharedSlice<"fcard", FcardSliceVariation>;
+
+/**
+ * Item in *Featurefour → Default → Primary → Featurefourcard*
+ */
+export interface FeaturefourSliceDefaultPrimaryFeaturefourcardItem {
+  /**
+   * featurefourimg field in *Featurefour → Default → Primary → Featurefourcard*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featurefour.default.primary.featurefourcard[].featurefourimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  featurefourimg: prismic.ImageField<never>;
+
+  /**
+   * featurefourdes field in *Featurefour → Default → Primary → Featurefourcard*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featurefour.default.primary.featurefourcard[].featurefourdes
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  featurefourdes: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *Featurefour → Default → Primary*
+ */
+export interface FeaturefourSliceDefaultPrimary {
+  /**
+   * Featurefourcard field in *Featurefour → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: featurefour.default.primary.featurefourcard[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  featurefourcard: prismic.GroupField<
+    Simplify<FeaturefourSliceDefaultPrimaryFeaturefourcardItem>
+  >;
+}
+
+/**
+ * Default variation for Featurefour Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturefourSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FeaturefourSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Featurefour*
+ */
+type FeaturefourSliceVariation = FeaturefourSliceDefault;
+
+/**
+ * Featurefour Shared Slice
+ *
+ * - **API ID**: `featurefour`
+ * - **Description**: Featurefour
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FeaturefourSlice = prismic.SharedSlice<
+  "featurefour",
+  FeaturefourSliceVariation
 >;
 
 /**
@@ -696,6 +664,126 @@ type HomebannerSliceVariation = HomebannerSliceDefault;
 export type HomebannerSlice = prismic.SharedSlice<
   "homebanner",
   HomebannerSliceVariation
+>;
+
+/**
+ * Primary content in *Mainslider → Default → Primary*
+ */
+export interface MainsliderSliceDefaultPrimary {
+  /**
+   * bannerimg field in *Mainslider → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mainslider.default.primary.bannerimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bannerimg: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Mainslider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MainsliderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MainsliderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Mainslider*
+ */
+type MainsliderSliceVariation = MainsliderSliceDefault;
+
+/**
+ * Mainslider Shared Slice
+ *
+ * - **API ID**: `mainslider`
+ * - **Description**: Mainslider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MainsliderSlice = prismic.SharedSlice<
+  "mainslider",
+  MainsliderSliceVariation
+>;
+
+/**
+ * Primary content in *Partner → Default → Primary*
+ */
+export interface PartnerSliceDefaultPrimary {
+  /**
+   * Partnermainheading field in *Partner → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partner.default.primary.partnermainheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  partnermainheading: prismic.RichTextField;
+
+  /**
+   * partnerImg field in *Partner → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partner.default.primary.partnerimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  partnerimg: prismic.ImageField<never>;
+
+  /**
+   * Partnerheading field in *Partner → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partner.default.primary.partnerheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  partnerheading: prismic.RichTextField;
+
+  /**
+   * partnerdes field in *Partner → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: partner.default.primary.partnerdes
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  partnerdes: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Partner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnerSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PartnerSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Partner*
+ */
+type PartnerSliceVariation = PartnerSliceDefault;
+
+/**
+ * Partner Shared Slice
+ *
+ * - **API ID**: `partner`
+ * - **Description**: Partner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PartnerSlice = prismic.SharedSlice<
+  "partner",
+  PartnerSliceVariation
 >;
 
 /**
@@ -759,29 +847,36 @@ declare module "@prismicio/client" {
       AlternateGridSliceVariation,
       AlternateGridSliceDefault,
       AlternateGridSliceImageRight,
-      FeaturedSlice,
-      FeaturedSliceDefaultPrimary,
-      FeaturedSliceVariation,
-      FeaturedSliceDefault,
-      FeaturedpointsSlice,
-      FeaturedpointsSliceDefaultPrimaryFeaturedcardItem,
-      FeaturedpointsSliceDefaultPrimary,
-      FeaturedpointsSliceFeaturedonePrimaryFeaturedcardItem,
-      FeaturedpointsSliceFeaturedonePrimary,
-      FeaturedpointsSliceFeaturedtwoPrimaryFeaturedcardItem,
-      FeaturedpointsSliceFeaturedtwoPrimary,
-      FeaturedpointsSliceVariation,
-      FeaturedpointsSliceDefault,
-      FeaturedpointsSliceFeaturedone,
-      FeaturedpointsSliceFeaturedtwo,
-      FeaturesSlice,
-      FeaturesSliceDefaultPrimary,
-      FeaturesSliceVariation,
-      FeaturesSliceDefault,
+      CtademoSlice,
+      CtademoSliceDefaultPrimary,
+      CtademoSliceVariation,
+      CtademoSliceDefault,
+      CtasectionSlice,
+      CtasectionSliceDefaultPrimary,
+      CtasectionSliceVariation,
+      CtasectionSliceDefault,
+      FcardSlice,
+      FcardSliceDefaultPrimaryFmaincardItem,
+      FcardSliceDefaultPrimary,
+      FcardSliceVariation,
+      FcardSliceDefault,
+      FeaturefourSlice,
+      FeaturefourSliceDefaultPrimaryFeaturefourcardItem,
+      FeaturefourSliceDefaultPrimary,
+      FeaturefourSliceVariation,
+      FeaturefourSliceDefault,
       HomebannerSlice,
       HomebannerSliceDefaultPrimary,
       HomebannerSliceVariation,
       HomebannerSliceDefault,
+      MainsliderSlice,
+      MainsliderSliceDefaultPrimary,
+      MainsliderSliceVariation,
+      MainsliderSliceDefault,
+      PartnerSlice,
+      PartnerSliceDefaultPrimary,
+      PartnerSliceVariation,
+      PartnerSliceDefault,
       SliderSlice,
       SliderSliceVariation,
       SliderSliceDefault,
