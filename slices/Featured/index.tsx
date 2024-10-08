@@ -14,8 +14,11 @@ const Featured = ({ slice }: FeaturedProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="es-bounded"
     >
-      Placeholder component for featured (variation: {slice.variation}) Slices
+       <div className="keyfeature">
+        <h3>Key Features</h3>
+       </div>
     </section>
   );
 };

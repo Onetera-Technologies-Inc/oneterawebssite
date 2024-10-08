@@ -52,6 +52,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "featuredpoints": {
+              "type": "SharedSlice"
+            },
             "homebanner": {
               "type": "SharedSlice"
             },
