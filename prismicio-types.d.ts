@@ -30,6 +30,7 @@ export interface HomeDocumentDataNavigationItem {
 }
 
 type HomeDocumentDataSlicesSlice =
+  | HousingsliderSlice
   | MainsliderSlice
   | CtademoSlice
   | PartnerSlice
@@ -667,6 +668,88 @@ export type HomebannerSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *Housingslider → Default → Primary → housingcard*
+ */
+export interface HousingsliderSliceDefaultPrimaryHousingcardItem {
+  /**
+   * housingheading field in *Housingslider → Default → Primary → housingcard*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: housingslider.default.primary.housingcard[].housingheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  housingheading: prismic.RichTextField;
+
+  /**
+   * housingdes field in *Housingslider → Default → Primary → housingcard*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: housingslider.default.primary.housingcard[].housingdes
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  housingdes: prismic.KeyTextField;
+
+  /**
+   * comingsoon field in *Housingslider → Default → Primary → housingcard*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: housingslider.default.primary.housingcard[].comingsoon
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  comingsoon: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Housingslider → Default → Primary*
+ */
+export interface HousingsliderSliceDefaultPrimary {
+  /**
+   * housingcard field in *Housingslider → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: housingslider.default.primary.housingcard[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  housingcard: prismic.GroupField<
+    Simplify<HousingsliderSliceDefaultPrimaryHousingcardItem>
+  >;
+}
+
+/**
+ * Default variation for Housingslider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HousingsliderSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HousingsliderSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Housingslider*
+ */
+type HousingsliderSliceVariation = HousingsliderSliceDefault;
+
+/**
+ * Housingslider Shared Slice
+ *
+ * - **API ID**: `housingslider`
+ * - **Description**: Housingslider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HousingsliderSlice = prismic.SharedSlice<
+  "housingslider",
+  HousingsliderSliceVariation
+>;
+
+/**
  * Primary content in *Mainslider → Default → Primary*
  */
 export interface MainsliderSliceDefaultPrimary {
@@ -869,6 +952,11 @@ declare module "@prismicio/client" {
       HomebannerSliceDefaultPrimary,
       HomebannerSliceVariation,
       HomebannerSliceDefault,
+      HousingsliderSlice,
+      HousingsliderSliceDefaultPrimaryHousingcardItem,
+      HousingsliderSliceDefaultPrimary,
+      HousingsliderSliceVariation,
+      HousingsliderSliceDefault,
       MainsliderSlice,
       MainsliderSliceDefaultPrimary,
       MainsliderSliceVariation,

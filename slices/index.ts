@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-
 export const components = {
   alternate_grid: dynamic(() => import("./AlternateGrid"),{ssr: false}),
   ctademo: dynamic(() => import("./Ctademo"),{ssr: false}),
@@ -10,6 +9,7 @@ export const components = {
   fcard: dynamic(() => import("./Fcard"),{ssr: false}),
   featurefour: dynamic(() => import("./Featurefour"),{ssr: false}),
   homebanner: dynamic(() => import("./Homebanner"),{ssr: false}),
+  housingslider: dynamic(() => import("./Housingslider"),{ssr: false}),
   mainslider: dynamic(() => import("./Mainslider"),{ssr: false}),
   partner: dynamic(() => import("./Partner"),{ssr: false}),
   slider: dynamic(() => import("./Slider"),{ssr: false}),
