@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { Content } from "@prismicio/client";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
@@ -30,6 +31,7 @@ const Header = ({ slice }: HeaderProps): JSX.Element => {
 
         <div className="right-menu">
         {slice.primary.sidemenu.map((item) => (
+          // eslint-disable-next-line react/jsx-key
           <PrismicNextLink field={item.sideitem} />
         ))}
         </div>
