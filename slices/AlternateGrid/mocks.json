@@ -297,10 +297,29 @@
 										}
 									]
 								}
+							],
+							[
+								"lbtn",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "lungs"
+									}
+								}
 							]
 						]
 					}
 				]
+			},
+			"learnmorebtn": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "burst"
+				}
 			}
 		},
 		"items": []

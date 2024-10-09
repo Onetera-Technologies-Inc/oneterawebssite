@@ -1,4 +1,4 @@
-import { PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import { type Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 
@@ -52,6 +52,7 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
                 <PrismicRichText field={slice.primary.description} />
               </div>
             )}
+			
           </div>
           {slice.primary.items.length > 0 && (
             <div className="es-alternate-grid__primary-content__items">
@@ -69,8 +70,12 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
                   )}
                 </div>
               ))}
+			 
             </div>
           )}
+		  <div className="learnmore one">
+			<PrismicNextLink field={slice.primary.featurebutton} />
+			</div>
         </div>
       </div>
 

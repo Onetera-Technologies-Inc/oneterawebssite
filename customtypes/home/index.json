@@ -52,6 +52,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "footer": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            },
             "housingslider": {
               "type": "SharedSlice"
             },

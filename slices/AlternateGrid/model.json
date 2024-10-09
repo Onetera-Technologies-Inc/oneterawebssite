@@ -147,8 +147,28 @@
                   "allowTargetBlank": true,
                   "multi": "paragraph,preformatted,hyperlink,strong,em,list-item,o-list-item,rtl"
                 }
+              },
+              "lbtn": {
+                "type": "Link",
+                "config": {
+                  "label": "lbtn",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
               }
             }
+          }
+        },
+        "learnmorebtn": {
+          "type": "Link",
+          "config": {
+            "label": "learnmorebtn",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
           }
         }
       },
