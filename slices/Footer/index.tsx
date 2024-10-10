@@ -36,12 +36,14 @@ const Footer = ({ slice }: FooterProps): JSX.Element => {
       <div className="footer-left">
         <div className="privacylinks">
       {slice.primary.footerprivacy.map((item) => (
+     // eslint-disable-next-line react/jsx-key
      <p><PrismicNextLink field={item.footerlinks} /></p>
       ))}
       </div>
 
 <div className="footersociallinks">
         {slice.primary.socialmedialinks.map((item) => (
+        // eslint-disable-next-line react/jsx-key
         <PrismicNextLink field={item.sociallinks} />
         ))}
         </div>

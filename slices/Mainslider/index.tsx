@@ -24,7 +24,7 @@ const Mainslider = ({ slice }: MainsliderProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="es-bounded"
     >
-
+      
       {/* <Carousel slides={dummySlides}/> */}
       <PrismicNextImage field={slice.primary.bannerimg} />
       
