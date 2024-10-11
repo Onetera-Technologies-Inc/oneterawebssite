@@ -251,6 +251,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{
   font-family: 'Decagram TRIAL' !important; 
@@ -294,12 +295,28 @@ p, li{
 /* Slider */
 
 .main-banner-bg {
-  background-image: url(./images/hero-bg.png);
+  /* background-image: url(./images/hero-bg.png); */
+  /* background-image: url(./images/main_banner_bg.png); */
   background-position: 140%;
   background-repeat: no-repeat;
-  background-size: 65% 100%;
-  height: 600px;
+  background-size: 66.3% 100%;
+  height: 650px;
 
+}
+.main-banner-bg::after{
+  content: "";
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/main_banner_bg.png);
+  right: 0;
+  top:0;
+  z-index: 99;
+  pointer-events: none;
+  background-size: 52%;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: top right;
 }
 .main-banner-bg .es-bounded {
   display: flex;
