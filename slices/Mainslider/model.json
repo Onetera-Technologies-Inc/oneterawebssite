@@ -19,6 +19,22 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "banner2": {
+          "type": "Image",
+          "config": {
+            "label": "banner2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "banner3": {
+          "type": "Image",
+          "config": {
+            "label": "banner3",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {}

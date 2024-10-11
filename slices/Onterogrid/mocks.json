@@ -1,0 +1,52 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"onteroheading": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"gridheading",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Magna laboris amet incididunt id sunt cupidatat cupidatat amet nisi. Ullamco Lorem adipisicing anim non culpa ullamco deserunt aliqua proident et dolor pariatur consectetur."
+											}
+										}
+									]
+								}
+							],
+							[
+								"griddes",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "monkey",
+									"type": "Text"
+								}
+							],
+							[
+								"gridlink",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "similar"
+									}
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

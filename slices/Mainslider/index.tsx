@@ -1,35 +1,53 @@
-import { Content } from "@prismicio/client";
-import { PrismicNextImage } from "@prismicio/next";
-import { SliceComponentProps } from "@prismicio/react";
-// import 'slick-carousel/slick/slick.css'; 
-// import 'slick-carousel/slick/slick-theme.css';
-// import Carousel from "@/app/componets/Carousel";
+'use client';
 
+import { PrismicNextImage } from '@prismicio/next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { SliceComponentProps } from '@prismicio/react';
+import { Content } from '@prismicio/client';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-/**
- * Props for `Mainslider`.
- */
 export type MainsliderProps = SliceComponentProps<Content.MainsliderSlice>;
 
-/**
- * Component for "Mainslider" Slices.
- */
-const Mainslider = ({ slice }: MainsliderProps): JSX.Element => {
-  const dummySlides = [ { url: 'https://via.placeholder.com/800x400?text=Slide+1', alt: 'Slide 1', title: 'Dummy Slide 1', description: 'This is the description for Slide 1', }, { url: 'https://via.placeholder.com/800x400?text=Slide+2', alt: 'Slide 2', title: 'Dummy Slide 2', description: 'This is the description for Slide 2', }, { url: 'https://via.placeholder.com/800x400?text=Slide+3', alt: 'Slide 3', title: 'Dummy Slide 3', description: 'This is the description for Slide 3', }, ];
+export default function Mainslider({ slice }: MainsliderProps) {
+  const images = [
+    slice.primary.bannerimg,
+    slice.primary.banner2,
+    slice.primary.banner3,
+    slice.primary.banner2,
+    slice.primary.banner3,
+  ];
+
   return (
-    <section
-      
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-      className="es-bounded"
-    >
-      
-      {/* <Carousel slides={dummySlides}/> */}
-      <PrismicNextImage field={slice.primary.bannerimg} />
-      
+    <section className='py-12 main__slider'>
+      <div className='container'>
+        <Swiper
+          navigation
+          pagination={{ type: 'fraction' }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
+          
+          modules={[Navigation, Pagination, Autoplay]}
+          onSwiper={(swiper) => console.log(swiper)}
+          className='h-96 w-full rounded-lg'
+          spaceBetween={30}  // Space between slides
+          slidesPerView={1.0001}  // Show part of the first and last slides
+          style={{ padding: '0 15%' }} // Added padding for peek effect
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className='flex h-full w-full items-center justify-center'>
+                {image && (
+                  <PrismicNextImage field={image} className='block h-full w-full object-cover' />
+                )}
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
-};
-
-export default Mainslider;
+}

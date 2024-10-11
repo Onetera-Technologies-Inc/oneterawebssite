@@ -1,0 +1,54 @@
+{
+  "id": "onterogrid",
+  "type": "SharedSlice",
+  "name": "Onterogrid",
+  "description": "Onterogrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "onteroheading": {
+          "type": "Group",
+          "config": {
+            "label": "onteroheadings",
+            "repeat": true,
+            "fields": {
+              "gridheading": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "gridheadings",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "griddes": {
+                "type": "Text",
+                "config": {
+                  "label": "griddescrption",
+                  "placeholder": ""
+                }
+              },
+              "gridlink": {
+                "type": "Link",
+                "config": {
+                  "label": "gridlinks",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "select": null,
+                  "allowText": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

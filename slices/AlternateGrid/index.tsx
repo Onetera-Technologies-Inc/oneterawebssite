@@ -51,8 +51,13 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
               <div className="es-alternate-grid__primary-content__intro__description">
                 <PrismicRichText field={slice.primary.description} />
               </div>
+			  
             )}
-			
+				<div className="learnmore lrn">
+					<PrismicNextLink field={slice.primary.featurebutton}>
+						Learn More
+					</PrismicNextLink>
+					</div>
           </div>
           {slice.primary.items.length > 0 && (
             <div className="es-alternate-grid__primary-content__items">
@@ -68,13 +73,16 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
                       <PrismicRichText field={item.description} />
                     </div>
                   )}
+				 
                 </div>
+				
               ))}
 			 
             </div>
           )}
 		 
         </div>
+		
       </div>
 
       <style>

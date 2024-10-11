@@ -1036,6 +1036,26 @@ export interface MainsliderSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   bannerimg: prismic.ImageField<never>;
+
+  /**
+   * banner2 field in *Mainslider → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mainslider.default.primary.banner2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  banner2: prismic.ImageField<never>;
+
+  /**
+   * banner3 field in *Mainslider → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mainslider.default.primary.banner3
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  banner3: prismic.ImageField<never>;
 }
 
 /**
@@ -1066,6 +1086,88 @@ type MainsliderSliceVariation = MainsliderSliceDefault;
 export type MainsliderSlice = prismic.SharedSlice<
   "mainslider",
   MainsliderSliceVariation
+>;
+
+/**
+ * Item in *Onterogrid → Default → Primary → onteroheadings*
+ */
+export interface OnterogridSliceDefaultPrimaryOnteroheadingItem {
+  /**
+   * gridheadings field in *Onterogrid → Default → Primary → onteroheadings*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onterogrid.default.primary.onteroheading[].gridheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  gridheading: prismic.RichTextField;
+
+  /**
+   * griddescrption field in *Onterogrid → Default → Primary → onteroheadings*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onterogrid.default.primary.onteroheading[].griddes
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  griddes: prismic.KeyTextField;
+
+  /**
+   * gridlinks field in *Onterogrid → Default → Primary → onteroheadings*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onterogrid.default.primary.onteroheading[].gridlink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  gridlink: prismic.LinkField;
+}
+
+/**
+ * Primary content in *Onterogrid → Default → Primary*
+ */
+export interface OnterogridSliceDefaultPrimary {
+  /**
+   * onteroheadings field in *Onterogrid → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: onterogrid.default.primary.onteroheading[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  onteroheading: prismic.GroupField<
+    Simplify<OnterogridSliceDefaultPrimaryOnteroheadingItem>
+  >;
+}
+
+/**
+ * Default variation for Onterogrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OnterogridSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OnterogridSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Onterogrid*
+ */
+type OnterogridSliceVariation = OnterogridSliceDefault;
+
+/**
+ * Onterogrid Shared Slice
+ *
+ * - **API ID**: `onterogrid`
+ * - **Description**: Onterogrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OnterogridSlice = prismic.SharedSlice<
+  "onterogrid",
+  OnterogridSliceVariation
 >;
 
 /**
@@ -1249,6 +1351,11 @@ declare module "@prismicio/client" {
       MainsliderSliceDefaultPrimary,
       MainsliderSliceVariation,
       MainsliderSliceDefault,
+      OnterogridSlice,
+      OnterogridSliceDefaultPrimaryOnteroheadingItem,
+      OnterogridSliceDefaultPrimary,
+      OnterogridSliceVariation,
+      OnterogridSliceDefault,
       PartnerSlice,
       PartnerSliceDefaultPrimary,
       PartnerSliceVariation,
