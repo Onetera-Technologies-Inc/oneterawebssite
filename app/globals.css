@@ -657,11 +657,26 @@ section.footer-bg {
   display: none !important;
 }
 .main__slider .swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
-  bottom: -30px;
+  bottom: -0px;
 }
 .main__slider .swiper {
-  padding-bottom: 20px !important;
+  padding-bottom: 40px !important;
 }
-.swiper-pagination span{
-  color: grey !important;
+.main__slider .swiper-pagination span{
+  width: 5px;
+  height: 3px;
+  border-radius: 50px;
+  background-color: #b5b5b5;
+  display: inline-block;
+  margin: 0px 5px;
+}
+.main__slider span.swiper-pagination-current {
+  width: 30px;
+}
+
+.main__slider .swiper-pagination {
+  font-size: 0;
+}
+.main__slider span.swiper-pagination-total {
+  box-shadow: 10px 0px 0 0 #bdbdbd;
 }
