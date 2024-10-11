@@ -433,7 +433,7 @@ line-height: 24px
   display: inline-block;
   border: 0;
 }
-.white-btn a:hover, .green-global-btn:hover{
+.white-btn a:hover, .green-global-btn:hover, .learnmore a:hover{
   background-color: #2f5c57;
   color:#fff;
 }

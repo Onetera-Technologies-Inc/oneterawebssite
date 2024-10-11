@@ -71,10 +71,10 @@
             }
           }
         },
-        "featurebutton": {
+        "newlink": {
           "type": "Link",
           "config": {
-            "label": "Featurebutton",
+            "label": "newlink",
             "placeholder": "",
             "allowTargetBlank": true,
             "select": null,

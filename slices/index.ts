@@ -12,8 +12,9 @@ export const components = {
   header: dynamic(() => import("./Header"),{ssr: false}), 
   homebanner: dynamic(() => import("./Homebanner"),{ssr: false}), 
   housingslider: dynamic(() => import("./Housingslider"),{ssr: false}), 
+  left_img: dynamic(() => import("./LeftImg"),{ssr: false}), 
   mainslider: dynamic(() => import("./Mainslider"),{ssr: false}), 
   onterogrid: dynamic(() => import("./Onterogrid"),{ssr: false}), 
   partner: dynamic(() => import("./Partner"),{ssr: false}), 
-  slider: dynamic(() => import("./Slider"),{ssr: false}), 
+  slider: dynamic(() => import("./Slider"),{ssr: false}),  
 };

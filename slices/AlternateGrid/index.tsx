@@ -53,11 +53,9 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
               </div>
 			  
             )}
-				<div className="learnmore lrn">
-					<PrismicNextLink field={slice.primary.featurebutton}>
-						Learn More
-					</PrismicNextLink>
-					</div>
+			<div className="learnmore">
+				<a href="">Learn More</a>
+			</div>
           </div>
           {slice.primary.items.length > 0 && (
             <div className="es-alternate-grid__primary-content__items">

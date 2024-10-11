@@ -1,0 +1,27 @@
+{
+  "format": "custom",
+  "id": "learnmore",
+  "label": "learnmore",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "learnmorebtn": {
+        "type": "Link",
+        "config": {
+          "label": "learnmorebtn",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      }
+    }
+  }
+}

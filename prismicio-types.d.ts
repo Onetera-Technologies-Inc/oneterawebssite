@@ -132,7 +132,39 @@ interface HomeDocumentData {
 export type HomeDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
-export type AllDocumentTypes = HomeDocument;
+/**
+ * Content for learnmore documents
+ */
+interface LearnmoreDocumentData {
+  /**
+   * learnmorebtn field in *learnmore*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: learnmore.learnmorebtn
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  learnmorebtn: prismic.LinkField;
+}
+
+/**
+ * learnmore document from Prismic
+ *
+ * - **API ID**: `learnmore`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LearnmoreDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<LearnmoreDocumentData>,
+    "learnmore",
+    Lang
+  >;
+
+export type AllDocumentTypes = HomeDocument | LearnmoreDocument;
 
 /**
  * Item in *AlternateGrid → Default → Primary → items*
@@ -251,14 +283,14 @@ export interface AlternateGridSliceDefaultPrimary {
   >;
 
   /**
-   * Featurebutton field in *AlternateGrid → Default → Primary*
+   * newlink field in *AlternateGrid → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: alternate_grid.default.primary.featurebutton
+   * - **API ID Path**: alternate_grid.default.primary.newlink
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  featurebutton: prismic.LinkField;
+  newlink: prismic.LinkField;
 }
 
 /**
@@ -1024,6 +1056,81 @@ export type HousingsliderSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *LeftImg → Default → Primary*
+ */
+export interface LeftImgSliceDefaultPrimary {
+  /**
+   * leftimg field in *LeftImg → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: left_img.default.primary.leftimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  leftimg: prismic.ImageField<never>;
+
+  /**
+   * leftheading field in *LeftImg → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: left_img.default.primary.leftheading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  leftheading: prismic.RichTextField;
+
+  /**
+   * leftdes field in *LeftImg → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: left_img.default.primary.leftdes
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  leftdes: prismic.KeyTextField;
+
+  /**
+   * leftlink field in *LeftImg → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: left_img.default.primary.leftlink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  leftlink: prismic.LinkField;
+}
+
+/**
+ * Default variation for LeftImg Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LeftImgSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<LeftImgSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *LeftImg*
+ */
+type LeftImgSliceVariation = LeftImgSliceDefault;
+
+/**
+ * LeftImg Shared Slice
+ *
+ * - **API ID**: `left_img`
+ * - **Description**: LeftImg
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LeftImgSlice = prismic.SharedSlice<
+  "left_img",
+  LeftImgSliceVariation
+>;
+
+/**
  * Primary content in *Mainslider → Default → Primary*
  */
 export interface MainsliderSliceDefaultPrimary {
@@ -1297,6 +1404,8 @@ declare module "@prismicio/client" {
       HomeDocumentData,
       HomeDocumentDataNavigationItem,
       HomeDocumentDataSlicesSlice,
+      LearnmoreDocument,
+      LearnmoreDocumentData,
       AllDocumentTypes,
       AlternateGridSlice,
       AlternateGridSliceDefaultPrimaryItemsItem,
@@ -1347,6 +1456,10 @@ declare module "@prismicio/client" {
       HousingsliderSliceDefaultPrimary,
       HousingsliderSliceVariation,
       HousingsliderSliceDefault,
+      LeftImgSlice,
+      LeftImgSliceDefaultPrimary,
+      LeftImgSliceVariation,
+      LeftImgSliceDefault,
       MainsliderSlice,
       MainsliderSliceDefaultPrimary,
       MainsliderSliceVariation,
