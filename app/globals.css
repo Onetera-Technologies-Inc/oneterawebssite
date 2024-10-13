@@ -321,7 +321,7 @@ p, li{
 .main-banner-bg .es-bounded {
   display: flex;
   align-items: center;
-  height: 50vh;
+  /* height: 50vh; */
   padding-top: 250px !important;
 }
 .main-banner-bg .es-bounded h1{
@@ -696,4 +696,7 @@ section.footer-bg {
 }
 .main__slider span.swiper-pagination-total {
   box-shadow: 10px 0px 0 0 #bdbdbd;
+}
+.es-bounded{
+  overflow-x: hidden;
 }
