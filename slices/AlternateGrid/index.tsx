@@ -27,7 +27,6 @@ const AlternateGrid = ({ slice }: AlternateGridProps): JSX.Element => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);

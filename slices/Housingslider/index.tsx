@@ -24,6 +24,20 @@ const Housingslider = ({ slice }: HousingsliderProps): JSX.Element => {
         navigation
         autoplay={{ delay: 2000 }}  // Adjust delay as per your needs
         loop={true}
+        breakpoints={{
+          240: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }}
       >
         {slice.primary.housingcard.map((item, index) => (
           <SwiperSlide key={index}>

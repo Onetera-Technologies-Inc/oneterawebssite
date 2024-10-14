@@ -700,3 +700,281 @@ section.footer-bg {
 .es-bounded{
   overflow-x: hidden;
 }
+
+.menu_toggle{
+  display: none;
+}
+
+@media (max-width:1180px) {
+  .menuitems {
+    position: absolute;
+    background: #000;
+    z-index: 99;
+    top: 65px;
+    width: 100%;
+    left: -102%;
+    padding: 20px;
+    transition: left 0.5s ease-in-out;
+}
+.menuitems.show{
+  left: 0px;
+}
+.menu_toggle{
+  display: block;
+}
+span.toggle_span {
+  transform: rotate(90deg);
+  display: block;
+  margin-left: 10px;
+}
+}
+
+@media (max-width:992px) {
+
+ 
+.menuitems a {
+    display: block;
+    color: #fff;
+}
+
+  .keyfeature div{
+    width: calc(50% - 40px);
+    margin-bottom: 30px;
+  }
+  .es-alternate-grid__primary-content__intro__headline h1 {
+    font-size: 25px;
+    line-height: 30px;
+}
+.Partner-description  p {
+  font-size: 35px;
+  max-width: 80%;
+}
+.ctalarge-head {
+  font-size: 35px;
+  max-width: 65%;
+}
+.main-banner-bg .es-bounded{
+  padding-top: 400px !important;
+}
+.minislider{
+  min-height: 420px;
+}
+.footerbottomlinks{
+  flex-wrap: wrap;
+}
+.footer-left{
+  width: 100%;
+  justify-content: space-between;
+}
+.footerright{
+  width: 100%;
+  text-align: center;
+}
+.main-banner-bg::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url(/_next/static/media/main_banner_bg.c4dce507.png);
+  right: 10px;
+  top: 0;
+  z-index: 99;
+  pointer-events: none;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: top right;
+}
+.main-banner-bg .es-bounded h1 {
+  font-size: 50px;
+}
+.main-banner-bg .es-bounded h1  br{
+ display: none;
+}
+}
+
+
+@media (max-width:767px) {
+  .main-banner-bg{
+    height: 480px;
+  }
+  .main-banner-bg .es-bounded h1{
+    font-size: 40px;
+  }
+  section.es-bounded.ctasection {
+    padding: 25px !important;
+}
+section.es-bounded.ctasection .flex.justify-between.align-baseline.margintop80 {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px !important;
+}
+.ctalarge-head {
+  font-size: 30px;
+  max-width: 100%;
+}
+.footercontact a::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(/_next/static/media/contactright.a64af467.png);
+  background-size: contain;
+  position: absolute;
+  right: -39px;
+  background-repeat: no-repeat;
+  top: 21px;
+}
+.main-footer .footercontact a {
+  font-size: 40px;
+  margin-top: 30px;
+}
+.footerbottomlinks{
+  flex-wrap: wrap;
+}
+.es-bounded .main-footer .footermenus {
+  width: 40%;
+}
+.footermenus a{
+  font-size: 25px;
+}
+.footerright {
+  width: 100%;
+  text-align: center;
+}
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.right-menu a:nth-child(2) {
+  padding: 7px 10px;
+
+}
+
+.right-menu a {
+  font-size: 14px;
+}
+.footer-left{
+  width: 100%;
+  justify-content: space-between;
+}
+.es-alternate-grid__image--right + div {
+  order: 2 !important;
+}
+.es-alternate-grid__image--right {
+  order: 1 !important;
+}
+.main-menu .logo img {
+  max-width: 120px;
+}
+
+.footerbottomlinks {
+  position: relative;
+  padding-top: 58px;
+}
+.footerbottomlinks a, .footerright span{
+  font-size: 16px;
+}
+.keyfeature div{
+  width: 100%;
+}
+.Partner-description  p {
+  font-size: 25px;
+  max-width: 80%;
+}
+.featured-heading{
+  margin-bottom: 40px;
+}
+section.es-bounded.ctasection {
+  margin: 20px auto 30px !important;
+}
+section.footer-bg{
+  margin-top: 50px;
+}
+.main__slider {
+  margin: 50px 0;
+}
+.featured-heading {
+  font-size: 30px;
+}
+.es-alternate-grid__image--right{
+  margin: 0px;
+}
+.sliderdescription{
+  min-height: auto;
+}
+
+}
+@media (max-width:600px) {
+  .main-banner-bg .es-bounded {
+    padding-top: 300px !important;
+}
+.minislider{
+  min-height: auto;
+}
+}
+@media (max-width:450px) {
+  .es-bounded .main-footer .footermenus {
+    width: 30%;
+}
+.footermenus a{
+  font-size: 16px;
+}
+.main-menu .logo img {
+  max-width: 100px;
+}
+.main-footer .footercontact a {
+  font-size: 25px;
+}
+.footercontact a::after {
+  width: 16px;
+  height: 16px;
+  right: -27px;
+  top: 12px;
+}
+.Partner-description p {
+  font-size: 20px;
+  max-width: 100%;
+}
+.menuitems{
+  top: 46px;
+}
+.main-banner-bg .es-bounded{
+  padding-top: 250px !important;
+}
+.main-banner-bg::after{
+  background-size:84%;
+}
+}
+
+@media (max-width:380px) {
+  .right-menu a {
+    font-size: 12px;
+    padding: 5px 8px;
+}
+.main-menu .logo img {
+  max-width: 80px;
+}
+.main-banner-bg .es-bounded h1 {
+  font-size: 32px;
+}
+.main-banner-bg .es-bounded h1 br{
+  display: none;
+}
+.main-banner-bg {
+  height: 340px;
+}
+.main-banner-bg .es-bounded {
+  padding-top: 180px !important;
+}
+.footerbottomlinks a, .footerright span{
+  font-size: 14px;
+}
+.Partner-text-heading{
+  font-size: 25px;
+}
+.main-banner-bg::after {
+  background-size: 65%;
+}
+}
