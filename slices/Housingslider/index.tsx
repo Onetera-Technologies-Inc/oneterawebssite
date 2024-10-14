@@ -22,7 +22,7 @@ const Housingslider = ({ slice }: HousingsliderProps): JSX.Element => {
         spaceBetween={30}
         slidesPerView={3}
         navigation
-        autoplay={{ delay: 2000 }}  // Adjust delay as per your needs
+        // autoplay={{ delay: 2000 }}  // Adjust delay as per your needs
         loop={true}
       >
         {slice.primary.housingcard.map((item, index) => (
