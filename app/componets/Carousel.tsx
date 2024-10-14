@@ -1,5 +1,6 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useRef } from "react";
+import Slider from "react-slick";
+
 // Define the types for the slide data
 interface Slide {
   url: string;
@@ -7,19 +8,23 @@ interface Slide {
   title?: string;
   description?: string;
 }
+
 interface CarouselProps {
   slides: Slide[];
 }
+
 const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false, // This disables autoplay
+    // autoplaySpeed: 3000, // No need to define this since autoplay is false
   };
+
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
@@ -32,4 +37,5 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
     </Slider>
   );
 };
+
 export default Carousel;

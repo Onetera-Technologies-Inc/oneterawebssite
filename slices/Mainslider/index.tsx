@@ -27,7 +27,7 @@ export default function Mainslider({ slice }: MainsliderProps) {
         <Swiper
           navigation
           pagination={{ type: 'fraction' }}
-          autoplay={{ delay: 3000 }}
+          // autoplay={{ delay: 3000 }}
           loop={true}
           
           modules={[Navigation, Pagination, Autoplay]}
