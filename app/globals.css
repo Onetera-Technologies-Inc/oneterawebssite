@@ -727,6 +727,9 @@ span.toggle_span {
   display: block;
   margin-left: 10px;
 }
+.minislider{
+  min-height: 420px;
+}
 }
 
 @media (max-width:992px) {
