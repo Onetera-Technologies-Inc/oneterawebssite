@@ -32,7 +32,7 @@ const Header = ({ slice }: HeaderProps): JSX.Element => {
             ))}
           </div>
         </div>
-
+         <div className="right-side-menu d-flex gap-3"> 
         <div className="right-menu">
           {slice.primary.sidemenu.map((item) => (
             // eslint-disable-next-line react/jsx-key
@@ -48,6 +48,7 @@ const Header = ({ slice }: HeaderProps): JSX.Element => {
         >
           {/* mobile menu toggle here */}
           <span className="toggle_span">|||</span>
+        </div>
         </div>
       </div>
     </section>

@@ -28,11 +28,11 @@ const Housingslider = ({ slice }: HousingsliderProps): JSX.Element => {
        
         breakpoints={{
           340: {
-            slidesPerView: 1.05,
+            slidesPerView: 1.01,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2.05,
+            slidesPerView: 1.05,
             spaceBetween: 20,
           },
           1024: {

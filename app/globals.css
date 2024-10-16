@@ -433,9 +433,12 @@ section.es-bounded.ctasection {
   color: #fff !important;
   min-height: 220px;
   font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px
+}
+.white-btn{
+  padding: 0px !important;
 }
 .white-btn a {
   border-radius: 7.711px;
@@ -795,9 +798,21 @@ span.toggle_span {
   transform: rotate(90deg);
   display: block;
   margin-left: 10px;
+  font-size: 30px;
 }
 .minislider{
   min-height: 420px;
+}
+.right-side-menu{
+  display: flex;
+  column-gap: 20px;
+}
+.right-menu a:nth-child(2){
+  padding: 4px 30px 9px;
+}
+.menuitems a {
+  display: block;
+  color: #fff;
 }
 }
 
@@ -865,7 +880,7 @@ span.toggle_span {
 }
 
 .housingslider  .swiper-slide {
-  width:38% !important;
+  width:30% !important;
  }
 }
 
@@ -987,7 +1002,7 @@ section.footer-bg{
     padding-top: 300px !important;
 }
 .minislider{
-  min-height: auto;
+  min-height: 350px;
 }
 .housingslider  .swiper-slide {
   width:46% !important;
@@ -1027,6 +1042,12 @@ section.footer-bg{
 }
 .main-banner-bg::after{
   background-size:84%;
+}
+}
+
+@media only screen and (max-width:480px){
+  .housingslider  .swiper-slide {
+    width: 50% !important;
 }
 }
 
