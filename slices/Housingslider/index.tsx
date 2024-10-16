@@ -22,9 +22,10 @@ const Housingslider = ({ slice }: HousingsliderProps): JSX.Element => {
         modules={[Navigation, Autoplay, EffectCoverflow]} // Include Coverflow module
         spaceBetween={30}
         slidesPerView={3.15}
-        navigation
+        // eslint-disable-next-line react/jsx-no-duplicate-props
         loop={true} // Loop enabled
-        autoplay={false} // Autoplay with 3s delay
+        autoplay={false}
+    
        
         breakpoints={{
           340: {
@@ -32,7 +33,7 @@ const Housingslider = ({ slice }: HousingsliderProps): JSX.Element => {
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 1.05,
+            slidesPerView: 2.05,
             spaceBetween: 20,
           },
           1024: {

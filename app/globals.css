@@ -886,6 +886,9 @@ span.toggle_span {
 
 
 @media (max-width:767px) {
+  .main-footer{
+    padding-top: 20px;
+  }
   .main-banner-bg{
     height: 480px;
   }
@@ -931,7 +934,8 @@ section.es-bounded.ctasection .flex.justify-between.align-baseline.margintop80 {
 }
 .footerright {
   width: 100%;
-  text-align: center;
+  text-align: left;
+  margin-top: 20px;
 }
 .right-menu {
   display: flex;
@@ -967,8 +971,20 @@ section.es-bounded.ctasection .flex.justify-between.align-baseline.margintop80 {
 .footerbottomlinks a, .footerright span{
   font-size: 16px;
 }
-.keyfeature div{
+.keyfeature div {
   width: 100%;
+  display: flex;
+  column-gap: 20px;
+  align-items: self-start;
+}
+.keyfeature div p {
+  font-size: 14px;
+  width: 90%;
+}
+.keyfeature div img {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 10%;
 }
 .Partner-description  p {
   font-size: 25px;
@@ -976,26 +992,43 @@ section.es-bounded.ctasection .flex.justify-between.align-baseline.margintop80 {
 }
 .featured-heading{
   margin-bottom: 40px;
+  font-size: 22px;
 }
 section.es-bounded.ctasection {
   margin: 20px auto 30px !important;
 }
 section.footer-bg{
   margin-top: 50px;
+  border-radius: 10px 10px 0 0;
 }
 .main__slider {
   margin: 50px 0;
 }
-.featured-heading {
-  font-size: 30px;
-}
+
 .es-alternate-grid__image--right{
   margin: 0px;
 }
 .sliderdescription{
   min-height: auto;
 }
-
+.es-alternate-grid__primary-content__intro__headline h1{
+  font-size: 22px;
+}
+.es-alternate-grid__primary-content__intro__description p{
+  font-size: 14px;
+}
+.main-footer{
+  flex-direction: column;
+}
+.footermenus{
+  margin-top: 20px;
+}
+.Partner-text-heading{
+  font-size:22px;
+}
+.Partner-desgination{
+  font-size: 18px;
+}
 }
 @media (max-width:600px) {
   .main-banner-bg .es-bounded {
@@ -1008,15 +1041,19 @@ section.footer-bg{
   width:46% !important;
  }
  section.es-bounded.ctasection{
-  display: none;;
+  display: none;
+ }
+ .feat-heading p{
+  font-size: 18px;
  }
 }
 @media (max-width:450px) {
   .es-bounded .main-footer .footermenus {
     width: 30%;
 }
-.footermenus a{
-  font-size: 16px;
+.footermenus a {
+  font-size: 22px;
+  padding: 5px 0;
 }
 .main-menu .logo img {
   max-width: 100px;
@@ -1043,11 +1080,18 @@ section.footer-bg{
 .main-banner-bg::after{
   background-size:84%;
 }
+.right-side-menu {
+  display: flex;
+  column-gap: 6px;
+}
 }
 
 @media only screen and (max-width:480px){
   .housingslider  .swiper-slide {
-    width: 50% !important;
+    width: 46% !important;
+}
+.swiper {
+  direction: rtl; /* Ensures the whole container respects RTL direction */
 }
 }
 
