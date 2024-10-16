@@ -1031,6 +1031,19 @@ section.footer-bg{
 }
 }
 @media (max-width:600px) {
+  .main-footer{
+    position: relative;
+  }
+  .footercontact {
+    position: absolute;
+    bottom: -10px;
+}
+.footermenus {
+  padding-bottom: 50px;
+}
+.footermenus {
+  margin-top: 40px;
+}
   .main-banner-bg .es-bounded {
     padding-top: 300px !important;
 }
